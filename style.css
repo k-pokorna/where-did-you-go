@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+}
+
+/* margin-lef a right: auto zadané zároveň zarovnají náš kontejner hezky doprostřed. Ještě kontejnerem obalit sekci s obrázky */
+
+.container {
+    max-width: 1140px;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Tahoma';
+}
+
+/* 1. sekce - hlavní (main) */
+
+.main {
+    margin-top: 90px;
+    margin-bottom: 120px;
+}
+
+.main-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-image {
+    width: 50%;
+}
+
+.main-text {
+    width: 50%;
+}
+
+.main-wrap h1 {
+    font-size: 48px;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Tahoma";
+    margin-bottom: 18px;
+}
+
+.main-wrap p {
+    width: 541px;
+    height: 102px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    font-family: "Tahoma";
+    margin-top: 31px;
+    margin-bottom: 44px;
+}
+
+.subheader1 {
+    width: 543px;
+    height: 104px;
+    font-size: 30px;
+    color: #000000;
+    font-family: "Tahoma";
+}
+
+.price-tag {
+    font-size: 48px;
+    line-height: 27px;
+    color: #313131;
+    font-family: "Tahoma";
+    display: block;
+}
+
+.buttons {
+    margin-top: 70px;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.blue-btn {
+    width: 175px;
+    height: 67px;
+    border-radius: 5px;
+    background-color: #4572d7;
+    border: 1px solid #4572d7;
+    font-size: 24px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Tahoma";
+    padding: 16px 55px;
+    margin-right: 32px;
+}
+
+.white-btn {
+    width: 287px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 3px solid #4572d7;
+    font-size: 24px;
+    line-height: 27px;
+    color: #4572d7;
+    font-weight: bold;
+    font-family: "Tahoma";
+    text-align: center;
+    padding: 14px 70px;
+}
+
+
+/* 2. sekce - způsoby platby (payment) */
+.payment {
+    width: 100%;
+    height: 348px;
+    background-color: #f2f2f2;
+}
+
+.payment-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.payment-item {
+    width: 25%;
+    text-align: center;
+}
+
+.payment-item span {
+    display: block;
+}
+
+.payment-item img {
+    margin-bottom: 15px;
+    margin-right: 70px;
+}
+
+.payment h2 {
+    font-size: 30px;
+    line-height: 27px;
+    color: #333333;
+    font-weight: bold;
+    font-family: "Tahoma";
+    margin-bottom: 77px;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.payment span {
+    width: 214px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+/* 3. sekce - knihu si objednali (people) */
+.people {
+    padding-top: 46px;
+    padding-bottom: 110px;
+}
+
+.people-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.people h2 {
+    font-size: 30px;
+    line-height: 27px;
+    color: #333333;
+    font-weight: bold;
+    font-family: "Tahoma";
+    text-align: center;
+    margin-bottom: 44px;
+    padding-top: 44px;
+}
+
+.people-item {
+    width: 23%;
+    margin-bottom: 35px;
+}
+
+.people-item img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    
+}
+
+
+/* PRAVIDLA PRO RESPONZIVITU WEBU - pro mobilní zařízení/tablety */
+
+/* Responzivita od 1024px */
+
+@media (max-width: 1024px) {
+    
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .blue-btn, .white-btn  {
+        display: inline-block;
+        max-width: 250px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .blue-btn {
+        margin-bottom: 20px;
+    }
+
+    .white-btn {
+        padding: 3px 55px;
+    }
+}
+
+/* Responzivita od 972px */
+
+@media (max-width: 972px) {
+
+    .main-wrap {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-image {
+        margin-bottom: 40px;
+    }
+
+    .main-wrap p {
+        width: 100%;
+    } 
+
+    .main-image, .main-text {
+        width: 100%;
+    }
+
+    .main-text p {
+        order: 1;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .white-btn {
+        padding: 3px 55px;
+    } 
+
+    .top-header {
+        padding-bottom: 100px;
+    }
+
+    .payment-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .payment-item {
+        width: 35%;
+        margin-bottom: 60px;
+    }
+
+    .payment {
+        height: 450px;
+    }
+
+    .people-item {
+        width: 48%;
+    }
+}
+
+
+/* Responzivita od 670px */
+
+@media (max-width: 670px) {
+    .payment-item {
+        margin-right: 75px;
+    }
+
+    .payment-item img {
+        margin-left: 75px;
+    }
+}
+
+
+/* Responzivita od 538px */
+
+@media (max-width: 972px) {
+    .main {
+        margin-bottom: 100px;
+    }
+
+     .payment {
+        height: 750px;
+    }
+
+    .main-image img {
+        display: block;
+        margin: 0 auto 40px auto;
+    }
+
+    .main-text {
+        text-align: center;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons a {
+        font-size: 20px;
+    }
+ 
+    .blue-btn {
+        margin-right: 0;
+    }
+
+    .white-btn {
+        padding: 18px 55px;
+    }
+}
+
+@media (min-width: 867px) and (max-width: 971px) {
+    .main-text p {
+        margin-bottom: 15px;
+    }
+}
