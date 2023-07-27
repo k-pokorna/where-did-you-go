@@ -334,3 +334,9 @@
         margin-bottom: 15px;
     }
 }
+
+@media (min-width: 0) and (max-width: 441px) {
+    .main-text p {
+        margin-bottom: 15px;
+    }
+}
