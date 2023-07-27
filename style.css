@@ -29,6 +29,10 @@
     width: 50%;
 }
 
+.main-image img {
+    max-width: 100%;
+}
+
 .main-text {
     width: 50%;
 }
